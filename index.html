@@ -80,9 +80,80 @@
             .section-card {
                 background: white !important;
                 border: 1px solid #e5e7eb !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 16px !important;
+                margin-bottom: 16px !important;
+            }
+            .card-hover,
+            .shadow-xl {
+                box-shadow: none !important;
+            }
+            .rounded-2xl,
+            .rounded-lg,
+            .rounded-full {
+                border-radius: 0 !important;
+            }
+            body,
+            .text-gray-900,
+            .text-gray-700,
+            .text-gray-600,
+            .text-purple-600,
+            .text-blue-600,
+            .text-purple-700,
+            .text-blue-700 {
+                color: #222 !important;
             }
             .print-button {
                 display: none !important;
+            }
+            .pl-11,
+            .ml-8 {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+            .mb-8,
+            .mb-6,
+            .mb-4,
+            .mb-2,
+            .mt-4 {
+                margin-bottom: 8px !important;
+                margin-top: 8px !important;
+            }
+            h1,
+            h2,
+            h3,
+            h4 {
+                color: #111 !important;
+                font-weight: bold !important;
+            }
+            .skill-badge {
+                background: #eee !important;
+                color: #222 !important;
+                box-shadow: none !important;
+            }
+            i.fas,
+            i.fab {
+                color: #888 !important;
+                filter: grayscale(1) !important;
+            }
+            a {
+                color: #111 !important;
+                text-decoration: underline !important;
+            }
+            a:after {
+                content: " (" attr(href) ")";
+                font-size: 10px;
+                color: #555;
+            }
+            .header-gradient {
+                background: none !important;
+                -webkit-text-fill-color: #111 !important;
+                color: #111 !important;
+            }
+            /* Avoid breaking sections across pages */
+            .section-card {
+                page-break-inside: avoid;
             }
         }
     </style>
