@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUHAMMAD UMER FAROOQ - CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .print-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media print {
+            .gradient-bg {
+                background: white !important;
+            }
+            .section-card {
+                background: white !important;
+                border: 1px solid #e5e7eb !important;
+            }
+            .print-button {
+                display: none !important;
+            }
+        }
+    </style>
+    <script>
+        const cvData = {
+            about: `Hi there, I'm a Software Developer. I love building and rebuilding open-source products. I have experience in Full Stack development (Web, Mobile, Desktop), Web scraping, APIs, and more.`,
+            contact: {
+                phone: "+92 315 5450266",
+                emails: ["umer@lablnet.com", "umer@frameworkisland.com"],
+                website: "https://lablnet.com",
+                github: {
+                    url: "https://github.com/lablnet",
+                    username: "lablnet"
+                },
+                linkedin: {
+                    url: "https://linkedin.com/in/lablnet",
+                    username: "lablnet"
+                }
+            },
+            skills: {
+                intro: "As a professional, I am constantly learning and expanding my knowledge. Some of the skills I have developed include:",
+                Languages: [
+                    "JavaScript", "Python", "PHP", "HTML", "CSS", "Dart", "C", "C++", "Ruby",
+                    "MySQL", "Firebase", "MongoDB"
+                ],
+                Frameworks: [
+                    "Laravel", "Django", "Vue", "React", "Electron", "TailwindCSS", "Flask", "Flutter", "Selenium", "Ruby on Rails"
+                ],
+                "Tools/Platforms": [
+                    "VS Code", "Jupyter Notebook", "Git", "Docker", "ClickUp"
+                ],
+                Other: [
+                    "Prompt Engineering", "RAG (Retrieval-Augmented Generation)", "OpenAI APIs", "LangChain", "Gemini", "LLM Integration"
+                ]
+            },
+            certificates: [{
+                title: "Cryptography 1 - Coursera online course (Stanford)",
+                link: "https://www.coursera.org/account/accomplishments/certificate/5DZ79VRJSBK3",
+                date: "Sep 2022"
+            }, {
+                title: "Open-Source-Software, Linux and Git - Coursera online course (The Linux Foundation)",
+                link: "https://www.coursera.org/account/accomplishments/specialization/certificate/C9BQZMZYQMCT",
+                date: "Jul 2020"
+            }, {
+                title: "Python For Everybody - Coursera online course (University of Michigan)",
+                link: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE123",
+                date: "Aug 2020"
+            }],
+            projects: [{
+                name: "PakJuris",
+                link: "https://github.com/lablnet/pakjuris",
+                description: "An agentic RAG solution for Pakistan's legal corpus with document search, vectorization, and semantic search capabilities."
+            }, {
+                name: "COVID19 Dashboard",
+                link: "https://covid19.alphasofthub.com/",
+                description: "Fast COVID-19 dashboard and parser for public awareness with automated data parsing and multi-country support."
+            }, {
+                name: "AlphaZ Framework",
+                link: "https://zestframework.github.io/",
+                description: "Lightweight, extensible PHP framework with minimal footprint for building apps without coding common features from scratch."
+            }],
+            education: [{
+                degree: "BS Software Engineering (Gold Medalist)",
+                institute: "Riphah International University",
+                years: "2020 – 2024",
+                score: "3.74 / 4.00"
+            }, {
+                degree: "Intermediate, Computer Science",
+                institute: "Punjab College",
+                years: "2017 – 2019",
+                score: "55%"
+            }, {
+                degree: "Matriculation",
+                institute: "FG Public School (Boys) Nai Chawni Rawalpindi",
+                years: "2015 – 2017",
+                score: "75%"
+            }, ],
+            experience: [{
+                role: "Software Engineer and Venture Partner",
+                company: "Framework Island (Remote)",
+                duration: "Jul 2025 – Present"
+            }, {
+                role: "Full Stack Developer II",
+                company: "Framework Island (Remote)",
+                duration: "Jun 2024 – Jul 2025"
+            }, {
+                role: "Top Rated Plus Freelancer",
+                company: "Upwork",
+                duration: "Dec 2020 – Present"
+            }, {
+                role: "Founder",
+                company: "MacroHub",
+                duration: "Aug 2024 – Present"
+            }, {
+                role: "Lead Intern Web Developer",
+                company: "Riphah International University",
+                duration: "Oct 2022 – Aug 2023"
+            }, {
+                role: "Software Engineer",
+                company: "Mennr (Remote)",
+                duration: "Oct 2022 – Jan 2023"
+            }, ],
+            interests: ["Open Source Development", "RAG & LLM", "Tour", "Listening Sad music", "Planting", 'Teaching'],
+            recommendations: [{
+                name: "LUCA VENEZIANO",
+                contact: "+1 (860) 329-2988",
+                email: "luca@mennr.com",
+                date: "December 2022",
+                text: `Muhammad has demonstrated a dedication to excellence in his work, consistently going above and beyond to ensure that our products are of the highest quality. He is highly organized and task oriented, and he is always eager to take on new challenges. Muhammad is an excellent problem solver, with the ability to quickly and accurately diagnose and resolve technical issues.`
+            }, {
+                name: "SAUD KHAN",
+                contact: "+92 300 5034360",
+                email: "muhammad.saud@riphah.edu.pk",
+                date: "November 2022",
+                text: `I have been supervising Umer for over six months on a large scale/complex web application project, during this time he has proven himself to be hardworking, tasks oriented and adaptable to stressful conditions. Umer's approach to software development is very mature and he has the special ability to convert complex tasks into the simpler ones. I found him devoted to his work and always keen to continue his intellectual growth. I have no doubt he can prove himself as a valuable asset for any team.`
+            }, {
+                name: "MANUEL LEMOS",
+                contact: "+55 14 99806-8719",
+                email: "mlemos@icontem.com",
+                date: "November 2022",
+                text: `Umer has been a very loyal and competent software developer that is always learning to become better in this profession.`
+            }]
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+                    const el = id => document.getElementById(id);
+
+                    el("about").innerHTML = `<p class="text-gray-700 leading-relaxed">${cvData.about}</p>`;
+
+                    el("contact").innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+            <i class="fas fa-phone text-purple-600 text-lg"></i>
+            <span class="text-gray-700">${cvData.contact.phone}</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+            <i class="fas fa-envelope text-purple-600 text-lg"></i>
+            <div class="flex flex-col">
+              ${cvData.contact.emails.map(email => 
+                `<a href="mailto:${email}" class="text-blue-600 hover:text-blue-800 transition-colors">${email}</a>`
+              ).join('')}
+            </div>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+            <i class="fas fa-globe text-purple-600 text-lg"></i>
+            <a href="${cvData.contact.website}" class="text-blue-600 hover:text-blue-800 transition-colors">${cvData.contact.website}</a>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+            <i class="fab fa-github text-purple-600 text-lg"></i>
+            <a href="${cvData.contact.github.url}" class="text-blue-600 hover:text-blue-800 transition-colors">${cvData.contact.github.username}</a>
+          </div>
+          <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg md:col-span-2">
+            <i class="fab fa-linkedin text-purple-600 text-lg"></i>
+            <a href="${cvData.contact.linkedin.url}" class="text-blue-600 hover:text-blue-800 transition-colors">${cvData.contact.linkedin.username}</a>
+          </div>
+        </div>`;
+
+                    el("skills").innerHTML =
+                        `<p class="mb-4 text-gray-700">${cvData.skills.intro}</p>` +
+                        Object.entries(cvData.skills).filter(([k]) => k !== 'intro').map(([category, items]) =>
+                            `<div class="mb-4">
+                                <h4 class="font-semibold text-purple-700 mb-2">${category}</h4>
+                                <div>
+                                    ${items.map(s => `<span class="skill-badge px-4 py-2 text-white rounded-full text-sm font-medium mr-3 mb-3 inline-block">${s}</span>`).join("")}
+                                </div>
+                            </div>`
+                        ).join("");
+
+                    el("certificates").innerHTML = `<div class="space-y-3">` +
+                        cvData.certificates.map(c =>
+                            `<div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg card-hover">
+                        <i class="fas fa-certificate text-purple-600"></i>
+                        <div class="flex-1">
+                            <a href="${c.link}" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">${c.title}</a>
+                            <p class="text-sm text-gray-500 mt-1">${c.date}</p>
+                        </div>
+                    </div>`
+                        ).join('') + `</div>`;
+
+                    el("projects").innerHTML = `<div class="space-y-3">` +
+                        cvData.projects.map(p =>
+                            `<div class="p-4 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex items-start space-x-3 mb-2">
+                            <i class="fas fa-code text-purple-600 mt-1"></i>
+                            <a href="${p.link}" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">${p.name}</a>
+                        </div>
+                        <p class="text-sm text-gray-600 ml-8">${p.description}</p>
+                    </div>`
+                        ).join('') + `<div class="mt-4 p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <p class="text-sm text-blue-700"><i class="fas fa-info-circle mr-2"></i>These are open source projects I have developed, not affiliated with my freelancing or job career.</p>
+                    </div>` + `</div>`;
+
+                    el("education").innerHTML = cvData.education.map(e =>
+                        `<div class="mb-4 p-4 bg-gray-50 rounded-lg card-hover">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-graduation-cap text-purple-600 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">${e.institute}</h3>
+                            <p class="text-gray-700">${e.degree} (${e.years})</p>
+                            <p class="text-sm text-purple-600 font-medium">GPA: ${e.score}</p>
+                        </div>
+                    </div>
+                </div>`
+                    ).join('');
+
+                    // Group experiences by company with improved logic
+                    const groupedExperience = {};
+                    cvData.experience.forEach(exp => {
+                        // Clean company name by removing location/status indicators
+                        let company = exp.company
+                            .replace(/\s*\([^)]*\)/g, '') // Remove (Remote), (On-site), etc.
+                            .replace(/\s*-\s*[^-]*$/, '') // Remove trailing location info
+                            .trim();
+
+                        // Handle special cases for better grouping
+                        if (company.toLowerCase().includes('framework island')) {
+                            company = 'Framework Island';
+                        } else if (company.toLowerCase().includes('riphah')) {
+                            company = 'Riphah International University';
+                        } else if (company.toLowerCase().includes('mennr')) {
+                            company = 'Mennr';
+                        }
+
+                        if (!groupedExperience[company]) {
+                            groupedExperience[company] = [];
+                        }
+                        groupedExperience[company].push(exp);
+                    });
+
+                    console.log('Grouped Experience:', groupedExperience);
+                    el("experience").innerHTML = Object.entries(groupedExperience).map(([company, roles]) => {
+                                if (roles.length === 1) {
+                                    // Single role - use original design
+                                    const role = roles[0];
+                                    return `<div class="mb-4 p-4 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-briefcase text-purple-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">${role.role}</h3>
+                                <p class="text-gray-700">${role.company}</p>
+                                <p class="text-sm text-purple-600 font-medium">${role.duration}</p>
+                            </div>
+                        </div>
+                    </div>`;
+                                } else {
+                                    // Multiple roles - use nested design
+                                    const companyDisplay = roles[0].company; // Use full company name with (Remote)
+
+                                    // Calculate total duration from first role to last role
+                                    const firstRole = roles[0];
+                                    const lastRole = roles[roles.length - 1];
+                                    const startDate = lastRole.duration.split(/[–-]/)[0].trim();
+                                    const endDate = firstRole.duration.split(/[–-]/)[1] ? firstRole.duration.split(/[–-]/)[1].trim() : 'Present';
+                                    const totalDuration = `${startDate} – ${endDate}`;
+
+                                    return `<div class="mb-6 p-6 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex items-start space-x-3 mb-4">
+                            <i class="fas fa-building text-purple-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">${companyDisplay}</h3>
+                                <p class="text-sm text-purple-600 font-medium">${totalDuration}</p>
+                            </div>
+                        </div>
+                        <div class="ml-8 space-y-3">
+                            ${roles.map((role, index) => `
+                                <div class="relative">
+                                    ${index < roles.length - 1 ? '<div class="absolute left-3 top-6 w-0.5 h-8 bg-purple-300"></div>' : ''}
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-briefcase text-white text-xs"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-semibold text-gray-900">${role.role}</h4>
+                                            <p class="text-sm text-gray-600">${role.duration}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>`;
+                }
+                                }).join('');
+
+                    el("interests").innerHTML = cvData.interests.map(interest =>
+                        `<span class="skill-badge px-4 py-2 text-white rounded-full text-sm font-medium mr-3 mb-3 inline-block">${interest}</span>`
+                    ).join("");
+
+                    el("recommendations").innerHTML = cvData.recommendations.map(r =>
+                        `<div class="mb-6 p-4 bg-gray-50 rounded-lg card-hover">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-user-check text-purple-600 mr-3"></i>
+                        <span class="font-semibold text-gray-900">${r.name}</span>
+                        <span class="ml-4 text-sm text-gray-500">${r.date}</span>
+                    </div>
+                    <div class="ml-8 text-sm text-gray-700">
+                        <div class="mb-1"><span class="font-medium">Contact:</span> <a href="tel:${r.contact}" class="text-blue-600">${r.contact}</a></div>
+                        <div class="mb-2"><span class="font-medium">Email:</span> <a href="mailto:${r.email}" class="text-blue-600">${r.email}</a></div>
+                        <div class="italic">${r.text}</div>
+                    </div>
+                </div>`
+            ).join("");
+        });
+
+        function printCV() {
+            window.print();
+        }
+    </script>
+</head>
+
+<body class="gradient-bg min-h-screen text-gray-900 font-sans">
+    <div class="max-w-5xl mx-auto p-6">
+        <!-- Header Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                <div class="flex items-center space-x-6">
+                    <img src="umer.jpg" alt="Muhammad Umer Farooq" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                    <div>
+                        <h1 class="header-gradient text-4xl md:text-5xl font-bold mb-2">MUHAMMAD UMER FAROOQ</h1>
+                        <p class="text-xl text-gray-600 font-medium">Software Developer</p>
+                    </div>
+                </div>
+                <button onclick="printCV()" class="print-button text-white px-6 py-3 rounded-lg font-medium print:hidden mt-4 md:mt-0">
+                    <i class="fas fa-print mr-2"></i>Print PDF
+                </button>
+            </div>
+
+            <!-- About Section -->
+            <section class="mb-8">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-user text-2xl text-purple-600 mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">About</h2>
+                </div>
+                <div id="about" class="pl-11"></div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-8">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-address-card text-2xl text-purple-600 mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">Contact</h2>
+                </div>
+                <div id="contact" class="pl-11"></div>
+            </section>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-tools text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Skills</h2>
+            </div>
+            <div id="skills" class="pl-11"></div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-briefcase text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Experience</h2>
+            </div>
+            <div id="experience" class="pl-11"></div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-project-diagram text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Projects</h2>
+            </div>
+            <div id="projects" class="pl-11"></div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-university text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Education</h2>
+            </div>
+            <div id="education" class="pl-11"></div>
+        </div>
+
+        <!-- Certificates Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-award text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Certificates</h2>
+            </div>
+            <div id="certificates" class="pl-11"></div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-heart text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Interests & Hobbies</h2>
+            </div>
+            <div id="interests" class="pl-11"></div>
+        </div>
+
+        <!-- Recommendations Section -->
+        <div class="section-card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-quote-left text-2xl text-purple-600 mr-3"></i>
+                <h2 class="text-2xl font-bold text-gray-900">Recommendations</h2>
+            </div>
+            <div id="recommendations" class="pl-11"></div>
+        </div>
+    </div>
+</body>
+
+</html>
